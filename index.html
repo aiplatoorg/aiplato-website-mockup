@@ -515,110 +515,51 @@ footer{background:#0f172a;color:#64748b;padding:36px 48px;display:flex;justify-c
 }
 /* -- HOME HERO CARD --------------------------------------------------- */
 .home-hero-wrap{padding-top:100px;padding-bottom:40px;background:#fff}
-.home-hero-inner{max-width:1200px;margin:0 auto;padding:0 24px}
-/* Two-column hero */
-.hero-two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
-  background:linear-gradient(135deg,#0C1A41 0%,#1a2d6b 60%,#0f2251 100%);
-  border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.28);min-height:600px;padding:64px 56px 64px 64px}
-@media(max-width:900px){.hero-two-col{grid-template-columns:1fr;padding:48px 32px}}
-/* Left text col */
-.hero-text-col{display:flex;flex-direction:column;align-items:flex-start;gap:0}
-.hero-text-col .hero-card-content{position:relative;display:flex;flex-direction:column;align-items:flex-start;text-align:left;padding:0}
-.hero-text-col .hero-pill{align-self:flex-start}
-.hero-text-col h1{text-align:left;font-size:clamp(32px,3.2vw,50px)}
-.hero-text-col .hero-cta-row{justify-content:flex-start}
-.hero-text-col .hero-fork-pill{align-self:flex-start}
-/* Right app window col */
-.hero-app-col{display:flex;align-items:center;justify-content:center}
-.hero-app-window{
-  width:100%;max-width:580px;border-radius:12px;overflow:hidden;
-  box-shadow:0 32px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.1);
-  animation:heroFloat 5s ease-in-out infinite;
-  transform-origin:center;
-}
-@keyframes heroFloat{0%,100%{transform:translateY(0px)}50%{transform:translateY(-10px)}}
-.hero-app-chrome{
-  background:#1e1e2e;border-bottom:1px solid rgba(255,255,255,.08);
-  padding:10px 14px;display:flex;align-items:center;gap:10px
-}
-.hero-dot{width:12px;height:12px;border-radius:50%}
-.hero-dot.r{background:#ff5f57}
-.hero-dot.y{background:#ffbd2e}
-.hero-dot.g{background:#28c840}
-.hero-url-bar{
-  flex:1;background:rgba(255,255,255,.08);border-radius:6px;
-  padding:4px 10px;font-family:proxima-nova,sans-serif;font-size:12px;
-  color:rgba(255,255,255,.5);display:flex;align-items:center;gap:6px
-}
-.hero-url-bar::before{content:"??";font-size:10px}
-/* Screenshot slides */
-.hero-app-screens{position:relative;background:#0d1117;aspect-ratio:16/9;overflow:hidden}
-.app-screen{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  opacity:0;transition:opacity .9s ease;display:block}
-.app-screen.visible{opacity:1}
-/* Caption strip at bottom of window */
-.hero-app-caption{
-  background:#0d0f1a;padding:8px 14px;
-  font-family:proxima-nova,sans-serif;font-size:11px;color:rgba(255,255,255,.45);
-  display:flex;align-items:center;gap:6px;min-height:30px
-}
-.hero-cap-dot{width:6px;height:6px;border-radius:50%;background:#4252AF;animation:capPulse 2s ease-in-out infinite}
-@keyframes capPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-/* keep old overlay classes inert */
-.hero-card-ov0,.hero-card-ov1,.hero-card-ov2{display:none}
-.hero-card-bg{display:none}
-/* base uniform dark layer � mutes the bright product UI */
+.home-hero-inner{max-width:1140px;margin:0 auto;padding:0 24px}
+.hero-card{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.22);min-height:600px}
+.hero-card-bg{position:absolute;inset:0}
+.hero-card-img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}
 .hero-card-ov0{position:absolute;inset:0;background:rgba(0,0,0,.42)}
-/* radial vignette � darker edges, lighter center to let product show subtly */
 .hero-card-ov1{position:absolute;inset:0;background:radial-gradient(circle at 50% 38%,rgba(0,0,0,0) 0%,rgba(0,0,0,.18) 50%,rgba(0,0,0,.42) 100%)}
-/* bottom-to-top gradient � ensures text at bottom is always readable */
 .hero-card-ov2{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.15) 30%,rgba(0,0,0,.55) 58%,rgba(0,0,0,.82) 100%)}
 .hero-card-content{
-  position:relative;z-index:2;min-height:600px;
-  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
-  text-align:center;padding:52px 48px;
+  position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;
+  text-align:center;padding:48px 48px 56px;height:100%;justify-content:flex-end;
 }
 .hero-pill{
-  display:inline-block;background:rgba(255,255,255,.14);
-  border:1px solid rgba(255,255,255,.28);border-radius:999px;
-  font-family:proxima-nova,sans-serif;font-size:12px;font-weight:600;
-  letter-spacing:.08em;text-transform:uppercase;padding:7px 22px;
-  margin-bottom:22px;color:rgba(255,255,255,.92);
+  display:inline-flex;align-items:center;font-family:proxima-nova,sans-serif;font-size:13px;
+  font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+  color:rgba(255,255,255,.9);background:rgba(255,255,255,.12);border-radius:999px;
+  padding:8px 18px;margin-bottom:24px;border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(6px);
 }
 .hero-card h1{
-  font-family:quincy-cf,serif;font-size:52px;line-height:1.05;
-  font-weight:700;letter-spacing:-.03em;color:#fff;margin:0 0 14px;max-width:780px;
-}
-.hero-card-sub{
-  font-family:proxima-nova,sans-serif;font-size:19px;font-weight:400;
-  color:rgba(255,255,255,.82);line-height:1.5;margin:0 0 28px;
+  font-family:quincy-cf,serif;font-size:clamp(36px,5vw,64px);font-weight:700;
+  color:#fff;line-height:1.1;margin-bottom:32px;text-shadow:0 2px 16px rgba(0,0,0,.3);
 }
 .hero-cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
 .hcta-primary{
   font-family:proxima-nova,sans-serif;font-size:16px;font-weight:700;
-  padding:13px 30px;border-radius:999px;border:1px solid rgba(255,255,255,.9);
-  background:#fff;color:#1c2430;cursor:pointer;
-  transition:background .18s,color .18s,transform .12s;
+  padding:15px 32px;border-radius:50px;background:#fff;color:#003392;
+  border:none;cursor:pointer;transition:all .2s;
 }
 .hcta-primary:hover{background:#003392;color:#fff}
 .hcta-primary:active{transform:translateY(1px)}
 .hcta-secondary{
   font-family:proxima-nova,sans-serif;font-size:16px;font-weight:600;
-  padding:13px 30px;border-radius:999px;border:1px solid rgba(255,255,255,.9);
-  background:transparent;color:#fff;cursor:pointer;
-  transition:background .18s,color .18s;
+  padding:14px 30px;border-radius:50px;background:transparent;color:#fff;
+  border:2px solid rgba(255,255,255,.5);cursor:pointer;transition:all .2s;
 }
 .hcta-secondary:hover{background:#fff;color:#1c2430}
 .hero-fork-pill{
-  font-family:proxima-nova,sans-serif;font-size:14px;font-weight:500;
-  display:inline-flex;align-items:center;gap:6px;
-  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
-  border-radius:999px;padding:10px 24px;color:rgba(255,255,255,.88);cursor:pointer;
-  transition:background .18s;
+  font-family:proxima-nova,sans-serif;font-size:14px;font-weight:400;
+  color:rgba(255,255,255,.8);background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.15);border-radius:999px;
+  padding:10px 22px;cursor:pointer;transition:background .2s;
+  backdrop-filter:blur(4px);
 }
 .hero-fork-pill:hover{background:rgba(255,255,255,.18)}
 .hero-fork-pill strong{color:#fff}
-
 /* -- FEATURE ACCORDION SECTIONS ------------------------------------------- */
 .feature-section{padding:80px 48px;background:#fff}
 .feature-section.alt{background:#F8F9FF}
@@ -815,43 +756,26 @@ footer{background:#0f172a;color:#64748b;padding:36px 48px;display:flex;justify-c
 
   <div class="home-hero-wrap">
     <div class="home-hero-inner">
-      <div class="hero-two-col">
-
-        <!-- Left: text -->
-        <div class="hero-text-col">
-          <div class="hero-card-content">
-            <div class="hero-pill">AI Teaching Assistant for STEM � Built by Harvard &amp; Stanford Educators</div>
-            <h1>The AI Teaching Assistant<br/>That Actually Teaches</h1>
-            <div class="hero-cta-row">
-              <button class="hcta-primary" onclick="alert('Magic-link trial flow opens here')">Try Free � 7-Day Trial</button>
-              <button class="hcta-secondary" onclick="alert('Plans modal opens here')">View Plans</button>
-            </div>
-            <button class="hero-fork-pill" onclick="showPage('educators')">
-              Are you an <strong>educator or institution?</strong> ? See Educator Tools
-            </button>
-          </div>
+      <div class="hero-card">
+        <div class="hero-card-bg">
+          <video class="hero-card-img" autoplay loop muted playsinline>
+            <source src="screenshots/hero_video.mp4" type="video/mp4"/>
+          </video>
         </div>
-
-        <!-- Right: animated app window -->
-        <div class="hero-app-col">
-          <div class="hero-app-window">
-            <div class="hero-app-chrome">
-              <span class="hero-dot r"></span>
-              <span class="hero-dot y"></span>
-              <span class="hero-dot g"></span>
-              <div class="hero-url-bar">app.aiplato.ai � Univ. Phys 101</div>
-            </div>
-            <div class="hero-app-screens" id="heroScreens">
-              <img class="app-screen visible" id="heroS0" src="screenshots/app-demo1.png" alt="aiPlato problem solver � step-by-step AI feedback"/>
-              <img class="app-screen"         id="heroS1" src="screenshots/app-demo2.jpg" alt="aiPlato knowledge graph � 800+ physics micro-concepts"/>
-            </div>
-            <div class="hero-app-caption" id="heroCaption">
-              <span class="hero-cap-dot"></span>
-              <span id="heroCaptionText">AI feedback � step-by-step diagnosis on student's handwritten work</span>
-            </div>
+        <div class="hero-card-ov0"></div>
+        <div class="hero-card-ov1"></div>
+        <div class="hero-card-ov2"></div>
+        <div class="hero-card-content">
+          <div class="hero-pill">AI Teaching Assistant for STEM &middot; Built by Harvard &amp; Stanford Educators</div>
+          <h1>The AI Teaching Assistant<br/>That Actually Teaches</h1>
+          <div class="hero-cta-row">
+            <button class="hcta-primary" onclick="alert('Magic-link trial flow opens here')">Try Free &mdash; 7-Day Trial</button>
+            <button class="hcta-secondary" onclick="alert('Plans modal opens here')">View Plans</button>
           </div>
+          <button class="hero-fork-pill" onclick="showPage('educators')">
+            Are you an <strong>educator or institution?</strong> &rarr; See Educator Tools
+          </button>
         </div>
-
       </div>
     </div>
   </div>
@@ -2034,22 +1958,6 @@ function showCompare(n){
     if(c) c.classList.toggle('sel', i===n);
   });
 }
-
-// -- HERO SCREENSHOT CYCLING --------------------------------------------------
-(function(){
-  const screens = [
-    { id:'heroS0', caption:'AI feedback - step-by-step diagnosis on handwritten student work' },
-    { id:'heroS1', caption:'Knowledge graph - 800+ physics micro-concepts tracked per student'   }
-  ];
-  let cur = 0;
-  function next(){
-    document.getElementById(screens[cur].id).classList.remove('visible');
-    cur = (cur + 1) % screens.length;
-    document.getElementById(screens[cur].id).classList.add('visible');
-    document.getElementById('heroCaptionText').textContent = screens[cur].caption;
-  }
-  setInterval(next, 5000);
-})();
 
 
 // ── MOBILE MENU ──────────────────────────────────────────────────────────────
