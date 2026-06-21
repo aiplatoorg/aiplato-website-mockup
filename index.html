@@ -450,74 +450,6 @@ footer{background:#0f172a;color:#64748b;padding:36px 48px;display:flex;justify-c
   .logos-row{gap:20px}
   footer{flex-direction:column;gap:16px;text-align:center}
 }
-/* ── HAMBURGER & MOBILE MENU ──────────────────────────────────────────── */
-.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;
-  width:36px;height:36px;background:none;border:none;cursor:pointer;
-  padding:4px;margin-left:auto;flex-shrink:0;border-radius:8px;transition:background .15s}
-.hamburger:hover{background:#f0f4ff}
-.hamburger span{display:block;height:2px;border-radius:2px;background:#0C1A41;
-  transition:transform .25s ease,opacity .25s ease,width .25s ease}
-.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.open span:nth-child(2){opacity:0;width:0}
-.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-.mobile-menu{
-  display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:999;
-  background:#fff;flex-direction:column;overflow-y:auto;
-  padding:90px 24px 40px;
-  animation:mobileSlideDown .22s ease;
-}
-.mobile-menu.open{display:flex}
-@keyframes mobileSlideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
-
-.mobile-menu-item{
-  font-family:proxima-nova,sans-serif;font-size:18px;font-weight:500;color:#0C1A41;
-  padding:16px 0;border-bottom:1px solid #f0f0f0;cursor:pointer;
-  background:none;border-left:none;border-right:none;border-top:none;
-  text-align:left;width:100%;display:flex;align-items:center;justify-content:space-between;
-  transition:color .15s;
-}
-.mobile-menu-item:hover{color:#4252AF}
-.mobile-menu-section{font-family:proxima-nova,sans-serif;font-size:12px;font-weight:700;
-  letter-spacing:.1em;text-transform:uppercase;color:#9ca3af;margin:20px 0 4px}
-.mobile-menu-sub{padding:12px 0 12px 16px;font-size:16px;font-weight:400;color:#374151;border-bottom:1px solid #f8f8f8}
-.mobile-menu-actions{margin-top:28px;display:flex;flex-direction:column;gap:12px}
-.mobile-btn-demo{font-family:proxima-nova,sans-serif;font-size:15px;font-weight:700;
-  padding:14px 24px;border-radius:14px;background:#003392;color:#fff;border:none;
-  cursor:pointer;width:100%;text-align:center}
-.mobile-btn-login{font-family:proxima-nova,sans-serif;font-size:15px;font-weight:500;
-  padding:13px 24px;border-radius:14px;background:#f8f9ff;color:#0C1A41;
-  border:1px solid #e5e7eb;cursor:pointer;width:100%;text-align:center}
-
-@media(max-width:768px){
-  .hamburger{display:flex}
-  .nav-links{display:none!important}
-  .nav-actions{display:none!important}
-  .navbar{padding:0 18px;height:52px}
-  .hero-card{min-height:unset}
-  .hero-card h1{font-size:clamp(28px,7vw,40px)}
-  .hero-card-content{padding:32px 24px 40px}
-  .hcta-primary,.hcta-secondary{width:100%;text-align:center}
-  .hero-cta-row{flex-direction:column;gap:10px}
-  .hero-fork-pill{width:100%;text-align:center;justify-content:center}
-  .stats-strip{flex-wrap:wrap;padding:16px 12px}
-  .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);
-    padding:10px 16px;flex:1 1 45%;min-width:0}
-  .logos-row{flex-wrap:wrap;gap:8px}
-  .logo-pill{font-size:12px;padding:6px 14px}
-  .section{padding:40px 20px}
-  .section-title{font-size:26px}
-  .section-body{font-size:15px}
-  .feature-two-col,.feature-two-col.reverse{direction:ltr!important;
-    grid-template-columns:1fr!important;gap:24px!important}
-  .feature-img-wrap img{border-radius:12px}
-  .real-team-grid{grid-template-columns:repeat(2,1fr)!important}
-  .blog-grid{grid-template-columns:1fr!important}
-  .three-col{grid-template-columns:1fr!important}
-  .two-col,.two-col-3-1{grid-template-columns:1fr!important;gap:28px!important}
-  footer{flex-direction:column;gap:14px;text-align:center;padding:28px 24px}
-  .footer-links{flex-wrap:wrap;justify-content:center;gap:12px}
-}
 
 /* ── HOME HERO CARD ─────────────────────────────────────────────────── */
 .home-hero-wrap{padding-top:100px;padding-bottom:40px;background:#fff}
@@ -687,6 +619,138 @@ footer{background:#0f172a;color:#64748b;padding:36px 48px;display:flex;justify-c
 .cf-submit:hover{background:#4252AF}
 @media(max-width:900px){.contact-body{grid-template-columns:1fr}.cf-row{grid-template-columns:1fr}}
 .section-tag.text-center{display:flex;justify-content:center}
+
+/* ── MOBILE HAMBURGER ─────────────────────────────────────────────────── */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;
+  width:36px;height:36px;background:none;border:none;cursor:pointer;
+  padding:4px;margin-left:auto;flex-shrink:0;border-radius:8px;transition:background .15s}
+.hamburger:hover{background:#f0f4ff}
+.hamburger span{display:block;height:2px;border-radius:2px;background:#0C1A41;
+  transition:transform .25s ease,opacity .25s ease,width .25s ease}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;width:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:999;
+  background:#fff;flex-direction:column;overflow-y:auto;padding:90px 24px 40px;
+  animation:mobileSlideDown .22s ease}
+.mobile-menu.open{display:flex}
+@keyframes mobileSlideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+.mobile-menu-item{font-family:proxima-nova,sans-serif;font-size:18px;font-weight:500;color:#0C1A41;
+  padding:16px 0;border-bottom:1px solid #f0f0f0;cursor:pointer;background:none;
+  border-left:none;border-right:none;border-top:none;text-align:left;width:100%;
+  display:flex;align-items:center;justify-content:space-between;transition:color .15s}
+.mobile-menu-item:hover{color:#4252AF}
+.mobile-menu-section{font-family:proxima-nova,sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;color:#9ca3af;margin:20px 0 4px}
+.mobile-menu-sub{padding:12px 0 12px 16px;font-size:16px;font-weight:400;color:#374151;border-bottom:1px solid #f8f8f8}
+.mobile-menu-actions{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+.mobile-btn-demo{font-family:proxima-nova,sans-serif;font-size:15px;font-weight:700;
+  padding:14px 24px;border-radius:14px;background:#003392;color:#fff;border:none;cursor:pointer;width:100%;text-align:center}
+.mobile-btn-login{font-family:proxima-nova,sans-serif;font-size:15px;font-weight:500;
+  padding:13px 24px;border-radius:14px;background:#f8f9ff;color:#0C1A41;
+  border:1px solid #e5e7eb;cursor:pointer;width:100%;text-align:center}
+
+/* ── 3-CIRCLE EQUATION (real website) ────────────────────────────────── */
+.ellipse-section{padding:64px 24px 48px;background:#fff}
+.ellipse-section .section-inner{max-width:1100px;margin:0 auto}
+.ellipse-row{display:flex;align-items:flex-start;justify-content:center;gap:16px}
+.ellipse-col{display:flex;flex-direction:column;align-items:center;gap:18px;flex:1;max-width:260px}
+.ellipse-col img.ellipse-img{width:180px;height:180px;object-fit:contain}
+.ellipse-col h5{font-family:quincy-cf,serif;font-size:1rem;font-weight:700;color:#0C1A41;text-align:center;margin:0}
+.ellipse-col p{font-family:proxima-nova,sans-serif;font-size:13.5px;color:#5a6475;text-align:center;line-height:1.6;margin:0}
+.ellipse-op{display:flex;align-items:center;padding-top:70px;flex-shrink:0}
+.ellipse-op img{width:48px;height:48px;object-fit:contain}
+
+/* ── TRUSTED BY INSTITUTIONS (real website) ───────────────────────────── */
+.trusted-section{padding:40px 24px 72px;background:#fff}
+.trusted-section h1{font-family:quincy-cf,serif;font-size:clamp(22px,2.4vw,34px);font-weight:700;
+  color:#0C1A41;text-align:center;margin-bottom:36px}
+.trusted-logos-card{background:#fff;border:1px solid #e8ecf8;border-radius:16px;
+  padding:32px 40px;box-shadow:0 2px 16px rgba(0,0,0,.06);
+  display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;
+  max-width:900px;margin:0 auto}
+.trusted-logos-card img{height:60px;max-width:160px;object-fit:contain;opacity:.85;filter:grayscale(20%)}
+
+/* ── GAME-CHANGING IMPACT (real website style) ─────────────────────────── */
+.impact-blue{background:linear-gradient(135deg,#003392 0%,#0c1a41 100%);padding:64px 24px}
+.impact-blue .section-inner{max-width:1100px;margin:0 auto}
+.impact-blue h1{font-family:quincy-cf,serif;font-size:clamp(24px,2.4vw,36px);font-weight:700;
+  color:#fff;text-align:center;margin-bottom:40px}
+.impact-research-col{display:flex;gap:48px;align-items:flex-start}
+.impact-highlight{flex:1}
+.impact-highlight h3{font-family:quincy-cf,serif;font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:12px}
+.impact-highlight p{font-family:proxima-nova,sans-serif;font-size:15px;color:rgba(255,255,255,.8);line-height:1.7;margin-bottom:20px}
+.impact-highlight .highlight-number{color:#fbbf24;font-weight:700}
+.impact-stat-cards{flex:1.4;display:flex;flex-direction:column;gap:16px}
+.impact-stat-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  border-radius:16px;padding:20px 24px;display:flex;align-items:center;gap:18px}
+.impact-stat-card img{width:48px;height:48px;object-fit:contain;flex-shrink:0}
+.impact-stat-val{font-family:quincy-cf,serif;font-size:1.8rem;font-weight:700;color:#fff;line-height:1}
+.impact-stat-val em{font-style:italic;font-size:1.6rem}
+.impact-stat-lbl{font-family:proxima-nova,sans-serif;font-size:13px;font-weight:600;color:rgba(255,255,255,.7);margin-top:4px}
+.impact-stat-sub{font-family:proxima-nova,sans-serif;font-size:12px;color:rgba(255,255,255,.5);margin-top:3px}
+.impact-stat-link{font-family:proxima-nova,sans-serif;font-size:12px;color:#93c5fd;margin-top:3px;text-decoration:none}
+.btnDarkBlue-white{font-family:proxima-nova,sans-serif;font-size:14px;font-weight:600;
+  padding:11px 24px;border-radius:24px;background:transparent;border:2px solid rgba(255,255,255,.5);
+  color:#fff;cursor:pointer;transition:all .2s}
+.btnDarkBlue-white:hover{background:#fff;color:#003392}
+
+/* ── WHAT OUR STUDENTS SAY (real website style) ───────────────────────── */
+.students-blue{background:linear-gradient(135deg,#003392 0%,#0c1a41 100%);padding:64px 24px}
+.students-blue .section-inner{max-width:1100px;margin:0 auto}
+.students-blue h1{font-family:quincy-cf,serif;font-size:clamp(24px,2.4vw,36px);font-weight:700;
+  color:#fff;text-align:center;margin-bottom:40px}
+.students-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.student-box{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;padding:28px;display:flex;flex-direction:column}
+.student-box img.quote-icon{width:28px;height:auto;margin-bottom:14px;opacity:.7}
+.student-box p{font-family:proxima-nova,sans-serif;font-size:14.5px;color:rgba(255,255,255,.88);
+  line-height:1.7;flex:1;margin-bottom:16px}
+.student-box .author{font-family:proxima-nova,sans-serif;font-size:13px;color:rgba(255,255,255,.55);
+  text-align:right}
+
+/* ── RETHINKING EDUCATION (additive) ──────────────────────────────────── */
+.rethink-section{padding:72px 24px 64px;background:var(--light)}
+.rethink-section .section-inner{max-width:1100px;margin:0 auto;text-align:center}
+
+/* ── PRODUCTS (additive) ──────────────────────────────────────────────── */
+/* product-card styles already in base CSS — just reuse existing */
+
+/* ── COMING STRIP (real website tone) ────────────────────────────────── */
+/* already in base CSS */
+
+/* ── MOBILE ───────────────────────────────────────────────────────────── */
+@media(max-width:768px){
+  .hamburger{display:flex}
+  .nav-links{display:none!important}
+  .nav-actions{display:none!important}
+  .navbar{padding:0 18px;height:52px}
+  .hero-card{min-height:unset}
+  .hero-card h1{font-size:clamp(28px,7vw,40px)}
+  .hero-card-content{padding:32px 24px 40px}
+  .hcta-primary,.hcta-secondary{width:100%;text-align:center}
+  .hero-cta-row{flex-direction:column;gap:10px}
+  .hero-fork-pill{width:100%;text-align:center;justify-content:center}
+  .ellipse-row{flex-direction:column;align-items:center;gap:24px}
+  .ellipse-op{padding-top:0}
+  .ellipse-op img{width:36px;height:36px}
+  .trusted-logos-card{gap:24px;padding:20px}
+  .trusted-logos-card img{height:44px}
+  .impact-research-col{flex-direction:column;gap:28px}
+  .students-grid{grid-template-columns:1fr}
+  .stats-strip{flex-wrap:wrap;padding:16px 12px}
+  .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);padding:10px 16px;flex:1 1 45%;min-width:0}
+  .section{padding:40px 20px}
+  .section-title{font-size:26px}
+  .feature-two-col,.feature-two-col.reverse{direction:ltr!important;grid-template-columns:1fr!important;gap:24px!important}
+  .real-team-grid{grid-template-columns:repeat(2,1fr)!important}
+  .blog-grid{grid-template-columns:1fr!important}
+  .three-col{grid-template-columns:1fr!important}
+  .two-col,.two-col-3-1{grid-template-columns:1fr!important;gap:28px!important}
+  footer{flex-direction:column;gap:14px;text-align:center;padding:28px 24px}
+  .footer-links{flex-wrap:wrap;justify-content:center;gap:12px}
+}
+
 </style>
 </head>
 <body>
@@ -731,33 +795,26 @@ footer{background:#0f172a;color:#64748b;padding:36px 48px;display:flex;justify-c
   </div>
   <div class="nav-actions">
     <button class="btn-demo" onclick="showPage('educators')">Request Demo</button>
-    <button class="btn-login" onclick="alert('Login flow')">Login</button>
+    <button class="btn-login" onclick="alert('Login modal opens here')">Login</button>
   </div>
   <button class="hamburger" id="hamburgerBtn" aria-label="Menu" onclick="toggleMobileMenu()">
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-<!-- Mobile Menu Overlay -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-section">Navigation</div>
   <button class="mobile-menu-item" onclick="mobileNav('home')">Home</button>
-
   <div class="mobile-menu-section">Products</div>
   <button class="mobile-menu-item mobile-menu-sub" onclick="mobileNav('homework')">&#128218; Homework Platform</button>
   <button class="mobile-menu-item mobile-menu-sub" onclick="mobileNav('testprep')">&#127919; Test Prep AI</button>
   <button class="mobile-menu-item mobile-menu-sub" onclick="mobileNav('courses')">&#127891; Independent Courses</button>
   <button class="mobile-menu-item mobile-menu-sub" onclick="mobileNav('compare')" style="color:#9ca3af">Compare Platforms</button>
-
   <button class="mobile-menu-item" onclick="mobileNav('educators')">Educators</button>
-
   <div class="mobile-menu-section">About</div>
   <button class="mobile-menu-item mobile-menu-sub" onclick="mobileNav('about')">&#128101; Our Team</button>
   <button class="mobile-menu-item mobile-menu-sub" onclick="mobileNav('blog')">&#9997;&#65039; Blog &amp; Resources</button>
   <button class="mobile-menu-item mobile-menu-sub" onclick="mobileNav('careers')">&#128188; Careers</button>
-
   <button class="mobile-menu-item" onclick="mobileNav('contact')">Contact</button>
-
   <div class="mobile-menu-actions">
     <button class="mobile-btn-demo" onclick="mobileNav('educators')">Request Demo</button>
     <button class="mobile-btn-login" onclick="alert('Login modal opens here')">Login</button>
@@ -807,22 +864,47 @@ footer{background:#0f172a;color:#64748b;padding:36px 48px;display:flex;justify-c
     <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">AP Practice Tests</div></div>
   </div>
 
-  <!-- Logos -->
-  <div class="logos-bar">
-    <div class="logos-eyebrow">Trusted by leading universities and high schools</div>
-    <div class="logos-row">
-      <div class="logo-pill">RICE</div>
-      <div class="logo-pill">Georgia Tech</div>
-      <div class="logo-pill">NYU</div>
-      <div class="logo-pill">UT Arlington</div>
-      <div class="logo-pill">Harvard</div>
+
+  <!-- ── 3-CIRCLE EQUATION (real website) ────────────────────────── -->
+  <section class="ellipse-section">
+    <div class="section-inner">
+      <div class="ellipse-row">
+        <div class="ellipse-col">
+          <img class="ellipse-img" src="screenshots/ellipse11.png" alt="Deep Research in Education"/>
+          <h5>Deep Research in Education</h5>
+          <p>aiPlato Harvard and Stanford education researchers have created groundbreaking insights on how expert 1-on-1 tutors boost learning.</p>
+        </div>
+        <div class="ellipse-op"><img src="screenshots/plus-light-blue.svg" alt="+"/></div>
+        <div class="ellipse-col">
+          <img class="ellipse-img" src="screenshots/ellipse5.png" alt="Purpose-Built Gen AI"/>
+          <h5>Purpose-Built Gen AI</h5>
+          <p>aiPlato AI experts have meticulously embodied insights from education research in purpose-built AI.</p>
+        </div>
+        <div class="ellipse-op"><img src="screenshots/equal-light-blue.svg" alt="="/></div>
+        <div class="ellipse-col">
+          <img class="ellipse-img" src="screenshots/ellipse4.png" alt="Revolutionary AI Teaching Assistant"/>
+          <h5>Revolutionary AI Teaching Assistant</h5>
+          <p>Culminating in the most advanced AI Teaching Assistant. It understands you, cognitively, and guides you to mastery. The most Personalized, Interactive, Engaging learning platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRUSTED BY LEADING INSTITUTIONS (real website) ──────────── -->
+  <div class="trusted-section">
+    <h1>Trusted by Leading Institutions</h1>
+    <div class="trusted-logos-card">
+      <img src="screenshots/texas.svg" alt="University of Texas Arlington"/>
+      <img src="screenshots/rice.svg" alt="Rice University"/>
+      <img src="screenshots/nyu.svg" alt="NYU"/>
+      <img src="screenshots/georgia-tech.svg" alt="Georgia Institute of Technology"/>
     </div>
   </div>
 
-  <!-- AI Era Section -->
-  <section class="section ai-era-section">
+  <!-- ── RETHINKING EDUCATION (additive) ──────────────────────────── -->
+  <section class="section ai-era-section rethink-section">
     <div class="section-inner text-center">
-      <span class="section-tag" style="color:#93c5fd">Why aiPlato</span>
+      <span class="section-tag" style="color:#4252AF">Why aiPlato</span>
       <h2 class="section-title">Rethinking Education for the Age of AI</h2>
       <p class="section-body">The skills students need to thrive are changing. Beyond memorizing formulas, students must reason deeply, diagnose their own errors, and persist through hard problems — the exact capabilities AI cannot replace. aiPlato is purpose-built to develop these metacognitive and problem-solving skills, not just deliver correct answers.</p>
       <div class="three-col" style="margin-top:0">
@@ -833,8 +915,8 @@ footer{background:#0f172a;color:#64748b;padding:36px 48px;display:flex;justify-c
     </div>
   </section>
 
-  <!-- Products Section -->
-  <section class="section" style="background:var(--light)">
+  <!-- ── PRODUCTS (additive) ──────────────────────────────────────── -->
+  <section class="section" style="background:#fff">
     <div class="section-inner">
       <span class="section-tag">Our Platform</span>
       <h2 class="section-title">One Platform. Three Products.<br/>Built on the Same AI Core.</h2>
@@ -891,133 +973,127 @@ footer{background:#0f172a;color:#64748b;padding:36px 48px;display:flex;justify-c
     </div>
   </section>
 
-
-  <!-- FEATURE: Lectures That Listen and Respond -->
+  <!-- ── FEATURE: Lectures That Listen and Respond ─────────────────── -->
   <section class="feature-section alt">
     <div class="section-inner">
       <div class="feature-two-col">
         <div>
-          <div class="feature-icon-badge">
-            <span>Interactive AI Teaching Assistant</span>
-          </div>
+          <div class="feature-icon-badge"><span>Interactive AI Teaching Assistant</span></div>
           <h2>Lectures That Listen<br/>and Respond</h2>
           <p class="sub">Your AI TA is always present — answering questions the moment they arise</p>
           <div class="feature-items">
-            <div class="feature-item">
-              <h4>Your Questions, Instantly Addressed</h4>
-              <p>Experience the nuance of a tutor who understands the roots of your confusion, offering precise clarification in real-time — like a professor in office hours, available 24/7.</p>
-            </div>
-            <div class="feature-item">
-              <h4>Dive Deeper with Interactive Elements</h4>
-              <p>Purpose-built AI engages you with content that is personalized to your strengths and weaknesses — not one-size-fits-all explanations.</p>
-            </div>
-            <div class="feature-item">
-              <h4>Real-Time Feedback</h4>
-              <p>Benefit from immediate, accurate responses to your in-lecture queries, allowing you to grasp complex concepts the moment they're discussed.</p>
-            </div>
+            <div class="feature-item"><h4>Your Questions, Instantly Addressed</h4><p>Experience the nuance of a tutor who understands the roots of your confusion, offering precise clarification in real-time — like a professor in office hours, available 24/7.</p></div>
+            <div class="feature-item"><h4>Dive Deeper with Interactive Elements</h4><p>Purpose-built AI engages you with content that is personalized to your strengths and weaknesses — not one-size-fits-all explanations.</p></div>
+            <div class="feature-item"><h4>Real-Time Feedback</h4><p>Benefit from immediate, accurate responses to your in-lecture queries, allowing you to grasp complex concepts the moment they're discussed.</p></div>
           </div>
         </div>
-        <div class="feature-img-wrap">
-          <img src="screenshots/Acc-1b.png" alt="AI Teaching Assistant — real-time lecture support"/>
-        </div>
+        <div class="feature-img-wrap"><img src="screenshots/Acc-1b.png" alt="AI Teaching Assistant — real-time lecture support"/></div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURE: Homework and Tests Prep -->
+  <!-- ── FEATURE: Homework and Tests Prep ─────────────────────────── -->
   <section class="feature-section">
     <div class="section-inner">
       <div class="feature-two-col reverse">
         <div>
-          <div class="feature-icon-badge">
-            <span>Become an Expert Problem Solver</span>
-          </div>
+          <div class="feature-icon-badge"><span>Become an Expert Problem Solver</span></div>
           <h2>Homework and Tests Prep<br/>that Teach</h2>
           <p class="sub">Step-by-step AI feedback on every problem — not just right or wrong</p>
           <div class="feature-items">
-            <div class="feature-item">
-              <h4>Get Step-by-Step Feedback, Master Every Problem</h4>
-              <p>Learn with a 24/7 AI Teaching Assistant that provides step-by-step feedback, understanding your thought process and guiding you through each problem with targeted interventions and insights.</p>
-            </div>
-            <div class="feature-item">
-              <h4>Customized Problem-Solving Practice</h4>
-              <p>Advance your skills with an AI that adapts to your needs, offering personalized problem-solving sessions that help you tackle challenges and learn topics in-depth, anytime, anywhere.</p>
-            </div>
-            <div class="feature-item">
-              <h4>Bring Any Problem, Any Topic</h4>
-              <p>Upload your own problems and let our AI Teaching Assistant break it down for you, offering clear, step-by-step guidance that ensures you not only find the answer but understand the how and why behind it.</p>
-            </div>
+            <div class="feature-item"><h4>Get Step-by-Step Feedback, Master Every Problem</h4><p>Learn with a 24/7 AI Teaching Assistant that provides step-by-step feedback, understanding your thought process and guiding you through each problem with targeted interventions and insights.</p></div>
+            <div class="feature-item"><h4>Customized Problem-Solving Practice</h4><p>Advance your skills with an AI that adapts to your needs, offering personalized problem-solving sessions that help you tackle challenges and learn topics in-depth, anytime, anywhere.</p></div>
+            <div class="feature-item"><h4>Bring Any Problem, Any Topic</h4><p>Upload your own problems and let our AI Teaching Assistant break it down for you, offering clear, step-by-step guidance that ensures you not only find the answer but understand the how and why behind it.</p></div>
           </div>
         </div>
-        <div class="feature-img-wrap">
-          <img src="screenshots/Acc-2a.png" alt="Homework and test prep — step-by-step AI feedback"/>
-        </div>
+        <div class="feature-img-wrap"><img src="screenshots/Acc-2a.png" alt="Homework and test prep — step-by-step AI feedback"/></div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURE: Personalized Teaching -->
+  <!-- ── FEATURE: Personalized Teaching ───────────────────────────── -->
   <section class="feature-section alt">
     <div class="section-inner">
       <div class="feature-two-col">
         <div>
-          <div class="feature-icon-badge">
-            <span>Master Concepts, Boost Confidence &amp; Grades</span>
-          </div>
+          <div class="feature-icon-badge"><span>Master Concepts, Boost Confidence &amp; Grades</span></div>
           <h2>Personalized Teaching<br/>for Your Proficiency</h2>
           <p class="sub">Every student gets a unique learning path — down to the micro-concept level</p>
           <div class="feature-items">
-            <div class="feature-item">
-              <h4>Personalized Lectures, Problems, and Interactions</h4>
-              <p>Learn from a tutor who understands your strengths and weaknesses, personalizing your learning to your needs, your struggles, and your proficiency map across 800+ micro-concepts.</p>
+            <div class="feature-item"><h4>Personalized Lectures, Problems, and Interactions</h4><p>Learn from a tutor who understands your strengths and weaknesses, personalizing your learning to your needs, your struggles, and your proficiency map across 800+ micro-concepts.</p></div>
+            <div class="feature-item"><h4>Focus Time &amp; Effort for Most Impact</h4><p>Target your study time on your proficiency needs, at the specificity of each micro-concept level — so you improve faster and retain more.</p></div>
+          </div>
+        </div>
+        <div class="feature-img-wrap"><img src="screenshots/Acc-3a.png" alt="Personalized teaching — proficiency-driven learning"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GAME-CHANGING LEARNING IMPACT (real website) ─────────────── -->
+  <div class="impact-blue">
+    <div class="section-inner">
+      <h1>Game-Changing Learning Impact</h1>
+      <div class="impact-research-col">
+        <div class="impact-highlight">
+          <h3>University of Texas at Arlington Study</h3>
+          <p>Independent study by Physics Education Research Group at University of Texas Arlington shows that students who did homework on aiPlato scored <span class="highlight-number">13.9 points</span> higher on their three-hour 100-point cumulative Final Exam (effect size = 0.8).</p>
+          <button class="btnDarkBlue-white" onclick="window.open('https://arxiv.org/abs/2601.09965','_blank')">Published Copy on arXiv</button>
+        </div>
+        <div class="impact-stat-cards">
+          <div class="impact-stat-card">
+            <img src="screenshots/card11.svg" alt=""/>
+            <div>
+              <div class="impact-stat-val">+13.9 pts</div>
+              <div class="impact-stat-lbl">Exam Score Gain</div>
+              <div class="impact-stat-sub">Cumulative 3-hr Final Exam<br/>University of Texas, Arl. PER</div>
             </div>
-            <div class="feature-item">
-              <h4>Focus Time &amp; Effort for Most Impact</h4>
-              <p>Target your study time on your proficiency needs, at the specificity of each micro-concept level — so you improve faster and retain more.</p>
+          </div>
+          <div class="impact-stat-card">
+            <img src="screenshots/card22.svg" alt=""/>
+            <div>
+              <div class="impact-stat-val"><em>d</em> = 0.81</div>
+              <div class="impact-stat-lbl">Effect Size</div>
+              <a href="https://arxiv.org/abs/2601.09965" target="_blank" class="impact-stat-link">https://arxiv.org/abs/2601.09965</a>
+            </div>
+          </div>
+          <div class="impact-stat-card">
+            <img src="screenshots/card33.svg" alt=""/>
+            <div>
+              <div class="impact-stat-val">~99%</div>
+              <div class="impact-stat-lbl">Auto-grade Accuracy</div>
+              <a href="https://openai.com/index/gpt-4-research/" target="_blank" class="impact-stat-link">vs. GPT-4's 64% on AP Physics (source: OpenAI)</a>
             </div>
           </div>
         </div>
-        <div class="feature-img-wrap">
-          <img src="screenshots/Acc-3a.png" alt="Personalized teaching — proficiency-driven learning"/>
-        </div>
       </div>
     </div>
-  </section>
+  </div>
 
-
-  <!-- Research Impact -->
-  <section class="section impact-section">
+  <!-- ── WHAT OUR STUDENTS SAY (real website) ─────────────────────── -->
+  <div class="students-blue">
     <div class="section-inner">
-      <div class="two-col">
-        <div>
-          <span class="section-tag" style="color:#93c5fd">Peer-Reviewed Evidence</span>
-          <h2 class="section-title">Game-Changing Learning Impact</h2>
-          <p class="section-body">Independent study by the Physics Education Research Group at University of Texas Arlington shows that students who did homework on aiPlato scored <strong style="color:#fbbf24">13.9 points higher</strong> on their three-hour, 100-point cumulative Final Exam — effect size = 0.81.</p>
-          <p style="font-size:13px;color:#60a5fa;margin-bottom:24px">Published: arxiv.org/abs/2601.09965 · UT Arlington PER Group · n=87</p>
-          <button class="btn-white" onclick="window.open('https://arxiv.org/abs/2601.09965','_blank')">Read Published Study ↗</button>
+      <h1>What Our Students Say</h1>
+      <div class="students-grid">
+        <div class="student-box">
+          <img class="quote-icon" src="screenshots/img-quote-sign.svg" alt=""/>
+          <p>I loved how aiPlato gave me hints and step-by-step feedback when I got stuck. Instead of just telling me my answer was wrong, it actually helped me figure out where I went off track and learn from my mistakes.</p>
+          <div class="author">- Emily, University, GA</div>
         </div>
-        <div class="impact-cards-grid">
-          <div class="impact-card"><div class="impact-num">+13.9 pts</div><div class="impact-lbl">Exam Score Gain</div><div class="impact-sub">Cumulative 3-hr Final · 100-pt scale</div></div>
-          <div class="impact-card"><div class="impact-num">d = 0.81</div><div class="impact-lbl">Effect Size</div><div class="impact-sub">Large effect (Cohen's d)</div></div>
-          <div class="impact-card wide"><div class="impact-num">~99%</div><div class="impact-lbl">Auto-grade Accuracy on Physics FRQs</div><div class="impact-sub">vs. GPT-4's 64% on AP Physics (source: OpenAI)</div></div>
+        <div class="student-box">
+          <img class="quote-icon" src="screenshots/img-quote-sign.svg" alt=""/>
+          <p>The Evaluate My Work feature was a game-changer. I could see exactly where my reasoning broke down and keep working until I got it right. Honestly, it feels way more supportive than other homework platforms I've used.</p>
+          <div class="author">- Vikram V., University, TX</div>
+        </div>
+        <div class="student-box">
+          <img class="quote-icon" src="screenshots/img-quote-sign.svg" alt=""/>
+          <p>aiPlato made tough physics problems feel less intimidating. The AI Teaching Assistant explained my errors clearly and nudged me with just the right hints so I could solve the problems on my own.</p>
+          <div class="author">- Aisha S., High School, CA</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Testimonials -->
-  <section class="section" style="background:var(--navy)">
-    <div class="section-inner">
-      <h2 class="section-title text-center" style="color:#fff;margin-bottom:40px">What Our Students Say</h2>
-      <div class="three-col">
-        <div class="testimonial-card"><div class="quote">"</div><p>I loved how aiPlato gave me hints and step-by-step feedback when I got stuck. Instead of just telling me my answer was wrong, it actually helped me figure out where I went off track and learn from my mistakes.</p><div class="author">— Emily, University of Georgia</div></div>
-        <div class="testimonial-card"><div class="quote">"</div><p>The Evaluate My Work feature was a game-changer. I could see exactly where my reasoning broke down. Honestly, it feels way more supportive than other homework platforms I've used.</p><div class="author">— Vikram V., University of Texas</div></div>
-        <div class="testimonial-card"><div class="quote">"</div><p>aiPlato made tough physics problems feel less intimidating. The AI Teaching Assistant explained my errors clearly and nudged me with just the right hints so I could solve problems on my own.</p><div class="author">— Aisha S., High School, CA</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Coming Soon -->
+  <!-- ── AIPLATO IS EXPANDING (additive) ──────────────────────────── -->
   <div class="coming-strip">
     <p>aiPlato is expanding. Stay tuned for AI Teaching Assistants in:</p>
     <div class="subjects">
@@ -1028,7 +1104,7 @@ footer{background:#0f172a;color:#64748b;padding:36px 48px;display:flex;justify-c
     </div>
   </div>
 
-  <!-- Bottom CTA -->
+  <!-- ── BOTTOM CTA ─────────────────────────────────────────────────── -->
   <section class="bottom-cta">
     <h2>Unleash Every Student's Potential</h2>
     <p>Join the growing number of universities replacing legacy homework platforms with the most advanced AI Teaching Assistant for STEM.</p>
@@ -1977,23 +2053,19 @@ function showCompare(n){
   });
 }
 
-// ── MOBILE MENU ──────────────────────────────────────────────────────────────
 function toggleMobileMenu(){
-  const menu = document.getElementById('mobileMenu');
-  const btn  = document.getElementById('hamburgerBtn');
-  const open = menu.classList.toggle('open');
-  btn.classList.toggle('open', open);
-  document.body.style.overflow = open ? 'hidden' : '';
+  const menu=document.getElementById('mobileMenu');
+  const btn=document.getElementById('hamburgerBtn');
+  const open=menu.classList.toggle('open');
+  btn.classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
 }
 function closeMobileMenu(){
   document.getElementById('mobileMenu').classList.remove('open');
   document.getElementById('hamburgerBtn').classList.remove('open');
-  document.body.style.overflow = '';
+  document.body.style.overflow='';
 }
-function mobileNav(page){
-  closeMobileMenu();
-  showPage(page);
-}
+function mobileNav(page){closeMobileMenu();showPage(page);}
 </script>
 </body>
 </html>
